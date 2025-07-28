@@ -15,6 +15,6 @@ document.body.appendChild(button);
 // Add click event
 button.addEventListener("click", function () {
   const currentValue = parseInt(counter.textContent);
-  alert("Current value: " + currentValue);
+  alert(currentValue);
   counter.textContent = currentValue + 1;
 });
