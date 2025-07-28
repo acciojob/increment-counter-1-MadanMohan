@@ -1,15 +1,20 @@
-// Access the DOM elements
-const counterElement = document.getElementById("counter");
-const incrementButton = document.getElementById("incrementBtn");
+// Create <p> element for counter
+const counter = document.createElement("p");
+counter.id = "counter";
+counter.textContent = "0"; // Initial value
 
-// Add click event to the button
-incrementButton.addEventListener("click", function () {
-  // Get current value from counter
-  const currentValue = parseInt(counterElement.textContent);
+// Create <button> element
+const button = document.createElement("button");
+button.id = "incrementBtn";
+button.textContent = "Increment";
 
-  // Alert the current (un-incremented) value
+// Append elements to the body
+document.body.appendChild(counter);
+document.body.appendChild(button);
+
+// Add click event
+button.addEventListener("click", function () {
+  const currentValue = parseInt(counter.textContent);
   alert("Current value: " + currentValue);
-
-  // Increment the value and update the counter
-  counterElement.textContent = currentValue + 1;
+  counter.textContent = currentValue + 1;
 });
